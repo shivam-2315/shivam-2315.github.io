@@ -53,6 +53,17 @@ p {
     background-clip: text;
 }
 
+.inline-link {
+    color: #667eea;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.inline-link:hover {
+    border-bottom: 1px solid #667eea;
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
@@ -382,29 +393,101 @@ p {
     margin-bottom: 2rem;
 }
 
-.about-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.stat {
-    text-align: center;
-    padding: 2rem;
-    border-radius: 15px;
+/* Research Section */
+.research {
+    padding: 100px 0;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    transition: transform 0.3s ease;
 }
 
-.stat:hover {
+.research-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contributions {
+    display: grid;
+    gap: 2rem;
+}
+
+.contribution-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+}
+
+.contribution-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
 }
 
-.stat h3 {
-    font-size: 2.5rem;
-    color: #667eea;
+.contribution-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.contribution-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.contribution-card h3 {
+    color: #333;
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.contribution-type {
+    color: #667eea;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.contribution-desc {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.contribution-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contrib-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 8px 16px;
+    background: #f8fafc;
+    color: #667eea;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.contrib-link:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.contrib-link i {
+    font-size: 0.85rem;
 }
 
 /* Experience Section */
@@ -601,9 +684,13 @@ section.animate-in {
         height: 250px;
     }
 
-    /* About Stats */
-    .about-stats {
-        grid-template-columns: 1fr;
+    /* Research */
+    .contribution-links {
+        flex-direction: column;
+    }
+
+    .contrib-link {
+        justify-content: center;
     }
 
     /* Timeline */
@@ -622,22 +709,6 @@ section.animate-in {
 
     .timeline-dot {
         left: 30px;
-    }
-
-    /* Skills */
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Projects */
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Contact */
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
     }
 
     /* Footer */
@@ -684,7 +755,7 @@ section.animate-in {
         padding: 1.5rem;
     }
 
-    .contact-form {
+    .contribution-card {
         padding: 1.5rem;
     }
 }
