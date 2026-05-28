@@ -106,7 +106,7 @@
                         <p class="contribution-type">Linux Kernel Security</p>
                         <p class="contribution-desc">
                             Discovered and patched a NULL pointer dereference vulnerability in the Linux kernel's 
-                            NVMe/TCP subsystem. The fix was merged to mainline and backported to six stable releases.
+                            NVMe/TCP subsystem. 
                         </p>
                         <div class="contribution-links">
                             <a href="https://www.cve.org/CVERecord?id=CVE-2026-22998" target="_blank" class="contrib-link">
@@ -125,9 +125,8 @@
                         <h3>CVE-2026-46135</h3>
                         <p class="contribution-type">Linux Kernel Security</p>
                         <p class="contribution-desc">
-                            Discovered nvmet-tcp: fix race between ICReq handling and queue teardown nvmet_tcp_handle_icreq() 
-                            updates queue->state after sending an Initialization Connection Response (ICResp). 
-                            The fix was merged to mainline and backported to six stable releases.
+                            Discovered a race condition between ICReq handling and queue teardown in the Linux kernel's 
+                            NVMe/TCP subsystem, where concurrent state transitions could trigger a double kref_put on an already-released queue. 
                         </p>
                         <div class="contribution-links">
                             <a href="https://www.cve.org/CVERecord?id=CVE-2026-46135" target="_blank" class="contrib-link">
