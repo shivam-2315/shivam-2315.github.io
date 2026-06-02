@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivam Kumar — Systems Security & Fuzzing</title>
+    <title>Shivam Kumar — Systems Security Researcher</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home"><span class="prompt">~/</span>shivam</a>
-            </div>
+            <a href="#home" class="nav-logo">Shivam&nbsp;Kumar</a>
             <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">home</a>
-                <a href="#about" class="nav-link">about</a>
-                <a href="#research" class="nav-link">research</a>
-                <a href="#experience" class="nav-link">experience</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="mailto:skumar47@syr.edu" class="nav-link nav-cta">Contact</a>
             </div>
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
@@ -31,159 +29,139 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-grid-bg"></div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="hero-eyebrow">// systems security · linux kernel · fuzzing</p>
-                    <h1 class="hero-title">Shivam<br><span class="highlight">Kumar</span></h1>
-                    <p class="hero-subtitle">PhD Student in Computer Science · Syracuse University</p>
-                    <p class="hero-description">
-                        Advised by
-                        <a href="https://endadul.github.io/" target="_blank" class="inline-link">Prof. Endadul Hoque</a>
-                        in the
-                        <a href="https://syne-lab.github.io/" target="_blank" class="inline-link">SYNE Lab</a>.
-                        I build protocol-aware fuzzers to find and responsibly disclose
+    <!-- Hero -->
+    <header id="home" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-main">
+                    <p class="eyebrow">Systems Security · Linux Kernel · Fuzzing</p>
+                    <h1 class="hero-title">
+                        Finding the bugs<br>
+                        before <em>they</em> do.
+                    </h1>
+                    <p class="hero-lede">
+                        I'm <strong>Shivam Kumar</strong>, a PhD student in Computer Science at
+                        Syracuse University, advised by
+                        <a href="https://endadul.github.io/" target="_blank" class="link">Prof. Endadul Hoque</a>
+                        in the <a href="https://syne-lab.github.io/" target="_blank" class="link">SYNE Lab</a>.
+                        I build protocol-aware fuzzers to discover and responsibly disclose
                         vulnerabilities in the Linux kernel's networked storage stack.
                     </p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-num">2</span>
-                            <span class="stat-label">CVEs assigned</span>
+                    <div class="hero-actions">
+                        <a href="#research" class="btn">View research</a>
+                        <div class="hero-social">
+                            <a href="https://www.linkedin.com/in/shivam-kumar-a27411193/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/shivam-2315" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="mailto:skumar47@syr.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
                         </div>
-                        <div class="stat">
-                            <span class="stat-num">6+</span>
-                            <span class="stat-label">stable backports</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-num">9.8</span>
-                            <span class="stat-label">top CVSS score</span>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/shivam-kumar-a27411193/" class="social-link" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/shivam-2315" class="social-link" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:skumar47@syr.edu" class="social-link" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="profile-frame">
-                        <div class="profile-initials">SK</div>
+                <aside class="hero-side">
+                    <figure class="portrait">
+                        <div class="portrait-fallback">SK</div>
                         <img src="profile-photo.jpg" alt="Shivam Kumar" onerror="this.style.display='none'">
-                        <div class="profile-tag">// available_for_collaboration = true</div>
-                    </div>
+                    </figure>
+                    <figcaption class="portrait-cap">Syracuse, NY</figcaption>
+                </aside>
+            </div>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="block-head">
+                <span class="kicker">01 — About</span>
+            </div>
+            <div class="about-grid">
+                <h2 class="lead-statement">
+                    My work sits where protocol design meets memory safety — turning
+                    specifications into fuzzers, and crashes into patches.
+                </h2>
+                <div class="about-body">
+                    <p>
+                        I research <strong>system security</strong> with a focus on <strong>fuzzing</strong>
+                        for software vulnerability discovery. My current work targets the Linux kernel's
+                        network protocol implementations: building grammar-driven, protocol-aware fuzzers
+                        that surface memory-safety and concurrency bugs, then driving them through coordinated
+                        disclosure to CVE assignment and upstream patches.
+                    </p>
+                    <p>
+                        Before my PhD I spent over three years at Wipro in ServiceNow development and GRC
+                        solutions. I currently teach as a Teaching Assistant for CSE.486 Design Operating Systems.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Research -->
+    <section id="research" class="section research">
         <div class="container">
-            <div class="section-head">
-                <span class="section-index">01</span>
-                <h2 class="section-title">About</h2>
+            <div class="block-head">
+                <span class="kicker">02 — Security Research</span>
+                <h2 class="block-title">Assigned CVEs</h2>
+                <p class="block-sub">Vulnerabilities discovered, reported, and patched in the upstream Linux kernel.</p>
             </div>
-            <div class="about-content">
-                <p>
-                    I'm a PhD student in Computer Science at Syracuse University researching
-                    <strong>system security</strong> with a focus on <strong>fuzzing</strong> for software
-                    vulnerability discovery. My current work targets the Linux kernel's network protocol
-                    implementations — building grammar-driven, protocol-aware fuzzers to surface memory-safety
-                    and concurrency bugs, then driving them through coordinated disclosure to CVE assignment
-                    and upstream patches.
-                </p>
-                <p>
-                    Before my PhD, I spent over three years in industry at Wipro working on ServiceNow
-                    development and GRC solutions. I also teach as a Teaching Assistant for
-                    CSE.486 Design Operating Systems.
-                </p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Research Section -->
-    <section id="research" class="research">
-        <div class="container">
-            <div class="section-head">
-                <span class="section-index">02</span>
-                <h2 class="section-title">Security Research</h2>
-            </div>
-            <p class="research-intro">Discovered, reported, and patched vulnerabilities in the upstream Linux kernel.</p>
-
-            <div class="cve-grid">
-                <!-- CVE CARD -->
-                <article class="cve-card">
-                    <div class="cve-top">
-                        <h3 class="cve-id">CVE-2026-46135</h3>
-                        <span class="sev sev-critical">9.8 · CRITICAL</span>
+            <ul class="cve-list">
+                <!-- CVE ITEM -->
+                <li class="cve-item">
+                    <div class="cve-id-col">
+                        <span class="cve-id">CVE-2026-46135</span>
+                        <span class="sev sev-critical">CVSS 9.8 · Critical</span>
                     </div>
-                    <p class="cve-sub">nvmet-tcp · race condition</p>
-                    <p class="cve-desc">
-                        Race between ICReq handling and queue teardown allowing a double <code>kref_put()</code>
-                        on an already-released queue — remotely triggerable without authentication.
-                    </p>
-                    <div class="cve-links">
-                        <a href="https://www.cve.org/CVERecord?id=CVE-2026-46135" target="_blank" class="cve-link">
-                            <i class="fas fa-arrow-up-right-from-square"></i> CVE
-                        </a>
-                        <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=5293a8882c549fab4a878bc76b0b6c951f980a61" target="_blank" class="cve-link">
-                            <i class="fab fa-git-alt"></i> Commit
-                        </a>
-                    </div>
-                </article>
-
-                <!-- CVE CARD -->
-                <article class="cve-card">
-                    <div class="cve-top">
-                        <h3 class="cve-id">CVE-2026-22998</h3>
-                        <span class="sev sev-high">Remote DoS</span>
-                    </div>
-                    <p class="cve-sub">nvme-tcp · NULL deref</p>
-                    <p class="cve-desc">
-                        NULL pointer dereference in the NVMe/TCP subsystem, triggered by out-of-order
-                        H2C_DATA PDUs — crashes storage servers remotely without authentication.
-                    </p>
-                    <div class="cve-links">
-                        <a href="https://www.cve.org/CVERecord?id=CVE-2026-22998" target="_blank" class="cve-link">
-                            <i class="fas fa-arrow-up-right-from-square"></i> CVE
-                        </a>
-                        <a href="https://git.kernel.org/torvalds/c/32b63acd78f577b332d976aa06b56e70d054cbba" target="_blank" class="cve-link">
-                            <i class="fab fa-git-alt"></i> Commit
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Add future CVEs by copying a .cve-card block -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-head">
-                <span class="section-index">03</span>
-                <h2 class="section-title">Experience</h2>
-            </div>
-            <div class="timeline">
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="tl-head">
-                            <h3>Research Assistant</h3>
-                            <span class="timeline-date">May 2026 — Present</span>
+                    <div class="cve-body">
+                        <p class="cve-sub">nvmet-tcp · race condition</p>
+                        <p class="cve-desc">
+                            A race between ICReq handling and queue teardown allows a double
+                            <code>kref_put()</code> on an already-released queue — remotely triggerable
+                            without authentication.
+                        </p>
+                        <div class="cve-links">
+                            <a href="https://www.cve.org/CVERecord?id=CVE-2026-46135" target="_blank">CVE record ↗</a>
+                            <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=5293a8882c549fab4a878bc76b0b6c951f980a61" target="_blank">Mainline commit ↗</a>
                         </div>
-                        <h4>Syracuse University · SYNE Lab</h4>
+                    </div>
+                </li>
+
+                <!-- CVE ITEM -->
+                <li class="cve-item">
+                    <div class="cve-id-col">
+                        <span class="cve-id">CVE-2026-22998</span>
+                        <span class="sev sev-high">CVSS 7.5 · High</span>
+                    </div>
+                    <div class="cve-body">
+                        <p class="cve-sub">nvme-tcp · NULL pointer dereference</p>
+                        <p class="cve-desc">
+                            A NULL pointer dereference triggered by out-of-order H2C_DATA PDUs, crashing
+                            storage servers remotely without authentication. Patched in mainline and
+                            backported to six stable releases.
+                        </p>
+                        <div class="cve-links">
+                            <a href="https://www.cve.org/CVERecord?id=CVE-2026-22998" target="_blank">CVE record ↗</a>
+                            <a href="https://git.kernel.org/torvalds/c/32b63acd78f577b332d976aa06b56e70d054cbba" target="_blank">Mainline commit ↗</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- To add a new CVE, copy a <li class="cve-item"> block. -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="block-head">
+                <span class="kicker">03 — Experience</span>
+            </div>
+
+            <div class="xp-list">
+                <article class="xp-item">
+                    <div class="xp-date">May 2026 — Present</div>
+                    <div class="xp-content">
+                        <h3>Research Assistant <span class="xp-org">· Syracuse University, SYNE Lab</span></h3>
                         <p>
                             Security research on Linux kernel network protocol implementations — protocol-aware
                             fuzzing, vulnerability discovery, and coordinated CVE disclosure in the NVMe/TCP subsystem.
@@ -195,88 +173,53 @@
                             <span class="tag">CVE Disclosure</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="tl-head">
-                            <h3>Teaching Assistant</h3>
-                            <span class="timeline-date">Aug 2025 — May 2026</span>
-                        </div>
-                        <h4>Syracuse University</h4>
+                <article class="xp-item">
+                    <div class="xp-date">Aug 2025 — May 2026</div>
+                    <div class="xp-content">
+                        <h3>Teaching Assistant <span class="xp-org">· Syracuse University</span></h3>
                         <p>
                             Led lab sessions, designed assignments, and graded coursework for
-                            CSE.486 Design Operating Systems across two semesters.
+                            CSE.486 Design Operating Systems across two semesters (Fall 2025 &amp; Spring 2026).
                         </p>
-                        <div class="tags">
-                            <span class="tag">CSE.486 · Fall 2025</span>
-                            <span class="tag">CSE.486 · Spring 2026</span>
-                        </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="tl-head">
-                            <h3>Research Assistant</h3>
-                            <span class="timeline-date">Sep 2024 — May 2025</span>
-                        </div>
-                        <h4>Syracuse University</h4>
+                <article class="xp-item">
+                    <div class="xp-date">Sep 2024 — May 2025</div>
+                    <div class="xp-content">
+                        <h3>Research Assistant <span class="xp-org">· Syracuse University</span></h3>
                         <p>
                             High Performance Computing research using C, MPI, and OpenMP — contributing to
                             projects in parallel computing and system optimization.
                         </p>
                     </div>
-                </div>
+                </article>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="tl-head">
-                            <h3>Analyst</h3>
-                            <span class="timeline-date">Jun 2022 — Jul 2024</span>
-                        </div>
-                        <h4>Wipro</h4>
-                        <p>Led ServiceNow GRC implementations and API integrations for enterprise clients.</p>
-                        <ul>
-                            <li>Led ServiceNow GRC implementations for enterprise clients</li>
-                            <li>Designed and developed custom applications and workflows</li>
-                            <li>Managed API integrations and third-party system connections</li>
-                        </ul>
+                <article class="xp-item">
+                    <div class="xp-date">Jun 2022 — Jul 2024</div>
+                    <div class="xp-content">
+                        <h3>Analyst <span class="xp-org">· Wipro</span></h3>
+                        <p>Led ServiceNow GRC implementations, custom applications, and API integrations for enterprise clients.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="tl-head">
-                            <h3>Project Engineer</h3>
-                            <span class="timeline-date">Jun 2021 — Jun 2022</span>
-                        </div>
-                        <h4>Wipro</h4>
-                        <p>Developed ServiceNow applications and learned enterprise solution delivery.</p>
-                        <ul>
-                            <li>Built ServiceNow applications using JavaScript and Python</li>
-                            <li>Implemented workflow automation and process optimization</li>
-                            <li>Collaborated with cross-functional teams on delivery</li>
-                        </ul>
+                <article class="xp-item">
+                    <div class="xp-date">Jun 2021 — Jun 2022</div>
+                    <div class="xp-content">
+                        <h3>Project Engineer <span class="xp-org">· Wipro</span></h3>
+                        <p>Developed ServiceNow applications with JavaScript and Python, and implemented workflow automation.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="tl-head">
-                            <h3>Intern</h3>
-                            <span class="timeline-date">Apr 2020 — Jun 2020</span>
-                        </div>
-                        <h4>HighRadius</h4>
+                <article class="xp-item">
+                    <div class="xp-date">Apr 2020 — Jun 2020</div>
+                    <div class="xp-content">
+                        <h3>Intern <span class="xp-org">· HighRadius</span></h3>
                         <p>Remote internship with exposure to enterprise software development and business processes.</p>
                     </div>
-                </div>
-
+                </article>
             </div>
         </div>
     </section>
@@ -284,18 +227,18 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <p><span class="prompt">~/</span>shivam-kumar · &copy; 2026</p>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/shivam-kumar-a27411193/" class="social-link" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/shivam-2315" class="social-link" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:skumar47@syr.edu" class="social-link" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+            <div class="footer-inner">
+                <div>
+                    <h2 class="footer-title">Let's talk.</h2>
+                    <a href="mailto:skumar47@syr.edu" class="footer-email">skumar47@syr.edu</a>
+                </div>
+                <div class="footer-meta">
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/shivam-kumar-a27411193/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/shivam-2315" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:skumar47@syr.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <p>&copy; 2026 Shivam Kumar</p>
                 </div>
             </div>
         </div>
@@ -309,14 +252,12 @@
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
-
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
             });
         });
-
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -324,24 +265,12 @@
                 if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            document.querySelectorAll('section').forEach(section => {
-                if (scrollY >= (section.offsetTop - 200)) current = section.getAttribute('id');
-            });
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
-            });
-        });
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('animate-in');
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-        document.querySelectorAll('section').forEach(section => observer.observe(section));
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.section, .footer').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
