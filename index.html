@@ -143,6 +143,47 @@
                     </div>
                 </li>
 
+                <!-- CVE ITEM -->
+                <li class="cve-item">
+                    <div class="cve-id-col">
+                        <span class="cve-id">CVE-2026-64535</span>
+                        <span class="sev sev-pending">CVSS pending</span>
+                    </div>
+                    <div class="cve-body">
+                        <p class="cve-sub">nvmet-tcp · use-after-free</p>
+                        <p class="cve-desc">
+                            When a data digest mismatch occurs on a non-final H2C_DATA PDU during an
+                            R2T-based transfer, the digest error handler drops the queue reference without
+                            marking the command complete — leaving it to be uninitialized a second time
+                            during teardown, a double <code>percpu_ref_put()</code> against a single
+                            <code>percpu_ref_get()</code>.
+                        </p>
+                        <div class="cve-links">
+                            <a href="https://www.cve.org/CVERecord?id=CVE-2026-64535" target="_blank">CVE record ↗</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- CVE ITEM -->
+                <li class="cve-item">
+                    <div class="cve-id-col">
+                        <span class="cve-id">CVE-2026-64534</span>
+                        <span class="sev sev-pending">CVSS pending</span>
+                    </div>
+                    <div class="cve-body">
+                        <p class="cve-sub">nvmet-tcp · refcount underflow</p>
+                        <p class="cve-desc">
+                            In the digest error path, <code>nvmet_req_uninit()</code> was called
+                            unconditionally even when <code>nvmet_req_init()</code> had already failed and
+                            never taken a reference — causing a <code>percpu_ref</code> underflow, a
+                            use-after-free diagnostic, and a permanent workqueue deadlock.
+                        </p>
+                        <div class="cve-links">
+                            <a href="https://www.cve.org/CVERecord?id=CVE-2026-64534" target="_blank">CVE record ↗</a>
+                        </div>
+                    </div>
+                </li>
+
                 <!-- To add a new CVE, copy a <li class="cve-item"> block. -->
             </ul>
         </div>
