@@ -188,6 +188,7 @@ code {
 }
 .sev-critical { color: #fff; background: var(--accent-d); }
 .sev-high { color: var(--accent-d); background: var(--paper-2); border: 1px solid var(--accent-d); }
+.sev-pending { color: var(--ink-soft); background: var(--paper-2); border: 1px solid var(--line); }
 .cve-sub {
     font-size: 0.9rem; color: var(--accent); font-weight: 600;
     letter-spacing: 0.3px; margin-bottom: 0.6rem;
